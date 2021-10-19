@@ -33,6 +33,11 @@ def recipes():
     return render_template("recipes.html")
 
 
+@app.route("/find_something_new")
+def find_something_new():
+    return render_template("find_something_new.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
