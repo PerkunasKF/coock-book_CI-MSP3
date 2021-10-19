@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/4c53668ab7.js" crossorigin="anonymous"></script>
     <!-- Linkt for Materialize 1.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 
     <title>Cook Book|Home</title>
 </head>
@@ -15,6 +16,7 @@
     
     <header>
 
+        <!-- Navigation bar -->
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo left">Logo</a>
@@ -30,6 +32,7 @@
             </div>
         </nav>
         
+        <!-- Mobile navigations -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#">User</a></li>
             <li><a href="#">Products</a></li>
@@ -39,6 +42,11 @@
             <li><a href="#">Register</a></li>
         </ul>
     </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

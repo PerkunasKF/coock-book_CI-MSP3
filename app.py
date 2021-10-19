@@ -18,9 +18,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/run_base")
-def run_base():
-    return render_template("base.html")
+@app.route("/run_home")
+def run_home():
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
